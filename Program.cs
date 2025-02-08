@@ -43,14 +43,11 @@ class User
 {
     public string Name { get; set; }
     public string Email { get; set; }
-}
 
-class FeatureEnvyExample
-{
-    public void DisplayUserDetails(User user)
+    public void DisplayDetails()
     {
-        Console.WriteLine("User Name: " + user.Name);
-        Console.WriteLine("User Email: " + user.Email);
+        Console.WriteLine("User Name: " + Name);
+        Console.WriteLine("User Email: " + Email);
     }
 }
 
@@ -66,7 +63,6 @@ class Program
         longMethodExample.ProcessData();
 
         var user = new User { Name = "Charlie", Email = "charlie@example.com" };
-        var featureEnvy = new FeatureEnvyExample();
-        featureEnvy.DisplayUserDetails(user);
+        user.DisplayDetails();
     }
 }
