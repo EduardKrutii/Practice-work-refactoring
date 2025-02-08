@@ -14,16 +14,26 @@ class LongMethodExample
 {
     public void ProcessData()
     {
+        string data = FetchData();
+        data = Process(data);
+        SaveData(data);
+    }
+
+    private string FetchData()
+    {
         Console.WriteLine("Fetching data...");
-        // Імітація отримання даних
-        string data = "Some important data";
+        return "Some important data";
+    }
 
+    private string Process(string data)
+    {
         Console.WriteLine("Processing data...");
-        // Імітація обробки
-        data = data.ToUpper();
+        return data.ToUpper();
+    }
 
+    private void SaveData(string data)
+    {
         Console.WriteLine("Saving data...");
-        // Імітація збереження
         Console.WriteLine("Data saved: " + data);
     }
 }
