@@ -3,14 +3,9 @@
 // Дублювання коду: Один і той же алгоритм використовується в двох різних місцях.
 class DuplicateCodeExample
 {
-    public void PrintUserInfo(string name, int age)
+    public void PrintPersonInfo(string role, string name, int age)
     {
-        Console.WriteLine("User: " + name + ", Age: " + age);
-    }
-
-    public void PrintEmployeeInfo(string name, int age)
-    {
-        Console.WriteLine("Employee: " + name + ", Age: " + age);
+        Console.WriteLine($"{role}: {name}, Age: {age}");
     }
 }
 
@@ -54,8 +49,8 @@ class Program
     static void Main()
     {
         var duplicateExample = new DuplicateCodeExample();
-        duplicateExample.PrintUserInfo("Alice", 30);
-        duplicateExample.PrintEmployeeInfo("Bob", 40);
+        duplicateExample.PrintPersonInfo("User", "Alice", 30);
+        duplicateExample.PrintPersonInfo("Employee", "Bob", 40);
 
         var longMethodExample = new LongMethodExample();
         longMethodExample.ProcessData();
